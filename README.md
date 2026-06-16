@@ -4,7 +4,6 @@ Backend-каркас закрытой социальной платформы н
 
 ## Что реализовано
 
-- единый Go-процесс;
 - конфигурация через переменные окружения;
 - JSON-логи в `out/logs`;
 - PostgreSQL connection pool;
@@ -15,10 +14,6 @@ Backend-каркас закрытой социальной платформы н
 - Docker Compose для приложения и PostgreSQL.
 - встроенная стартовая web-страница на `http://localhost:8080`.
 
-Auth и Telegram-активация будут следующими feature. Поэтому users endpoints
-в production защищены `DenyPrincipalProvider`. В локальном Compose создаётся
-тестовый пользователь `@hachi`, а `APP_DEV_USER_ID` включает development
-identity без небезопасного HTTP-заголовка.
 
 ## Локальный запуск
 
