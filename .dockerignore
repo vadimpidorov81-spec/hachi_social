@@ -1,0 +1,7 @@
+.cache
+.git
+.env
+out
+*.log
+coverage.out
+bin

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HachiSocial — закрытое пространство для общения, дневника и личного прогресса.">
+  <title>HachiSocial</title>
+  <link rel="stylesheet" href="/assets/styles.css">
+  <script src="/assets/app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="HachiSocial">
+      <span class="brand-mark">H</span>
+      <span>HachiSocial</span>
+    </a>
+    <span class="eyebrow">Закрытая beta</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="kicker">Сообщество, которое растёт вместе с тобой</p>
+        <h1>Общайся. Веди дневник. Не теряй свой прогресс.</h1>
+        <p class="hero-text">
+          HachiSocial объединяет тематические обсуждения, ежедневные записи
+          и трекеры отказа от вредных привычек в одном спокойном пространстве.
+        </p>
+        <div class="actions">
+          <a class="primary" href="#profile">Открыть профиль</a>
+          <a class="secondary" href="#features">Что внутри</a>
+        </div>
+      </div>
+
+      <aside class="status-card" aria-live="polite">
+        <div class="status-row">
+          <span class="status-dot" id="status-dot"></span>
+          <span id="status-label">Проверяем платформу...</span>
+        </div>
+        <p id="status-detail">Подключаемся к локальному API.</p>
+        <dl>
+          <div>
+            <dt>Backend</dt>
+            <dd>Go</dd>
+          </div>
+          <div>
+            <dt>Data</dt>
+            <dd>PostgreSQL</dd>
+          </div>
+          <div>
+            <dt>Deploy</dt>
+            <dd>Docker</dd>
+          </div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="features" id="features">
+      <article>
+        <span class="feature-number">01</span>
+        <h2>Тематические пространства</h2>
+        <p>Обсуждения об IT, социальных профессиях, саморазвитии и повседневной жизни.</p>
+      </article>
+      <article>
+        <span class="feature-number">02</span>
+        <h2>Личный прогресс</h2>
+        <p>Отмечай дни без нежелательной привычки и сохраняй историю без давления и рейтингов.</p>
+      </article>
+      <article>
+        <span class="feature-number">03</span>
+        <h2>Ежедневный дневник</h2>
+        <p>Записывай мысли только для себя или делись ими со всеми участниками платформы.</p>
+      </article>
+    </section>
+
+    <section class="profile-section" id="profile">
+      <div class="section-heading">
+        <p class="kicker">Users feature</p>
+        <h2>Первый пользователь уже внутри.</h2>
+        <p>Профиль загружается из PostgreSQL и сохраняется через реальный API.</p>
+      </div>
+
+      <div class="profile-layout">
+        <article class="profile-card">
+          <div class="avatar" id="profile-avatar">H</div>
+          <div>
+            <span class="profile-label">Тестовый профиль</span>
+            <h3 id="profile-name">Загрузка...</h3>
+            <p class="profile-username" id="profile-username">@...</p>
+          </div>
+          <p class="profile-bio" id="profile-bio">Получаем пользователя из API.</p>
+          <div class="profile-meta">
+            <span id="profile-role">user</span>
+            <span id="profile-timezone">UTC</span>
+          </div>
+        </article>
+
+        <form class="profile-form" id="profile-form">
+          <div class="form-heading">
+            <h3>Редактировать профиль</h3>
+            <span class="form-status" id="form-status"></span>
+          </div>
+          <label>
+            Отображаемое имя
+            <input id="display-name" name="display_name" maxlength="50" required>
+          </label>
+          <label>
+            О себе
+            <textarea id="bio" name="bio" maxlength="500" rows="4"></textarea>
+          </label>
+          <label>
+            Часовой пояс
+            <input id="timezone" name="timezone" value="Europe/Moscow" required>
+          </label>
+          <button class="primary form-submit" type="submit">Сохранить изменения</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="roadmap">
+      <div>
+        <p class="kicker">Сейчас в разработке</p>
+        <h2>Надёжная основа до красивых обещаний.</h2>
+      </div>
+      <ul>
+        <li class="done">Профили пользователей</li>
+        <li class="current">Авторизация и активация через Telegram</li>
+        <li>Посты и ежедневный дневник</li>
+        <li>Трекеры привычек</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <span>HachiSocial</span>
+    <span>Локальная среда разработки</span>
+  </footer>
+</body>
+</html>

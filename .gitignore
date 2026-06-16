@@ -1,0 +1,7 @@
+.env
+.cache/
+out/logs/*.log
+bin/
+coverage.out
+
+!.gitkeep
